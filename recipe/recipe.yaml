@@ -1,16 +1,15 @@
 schema_version: 1
 
 context:
-  name: myokit
-  version: "1.39.2"
+  version: "1.40.0"
 
 package:
-  name: ${{ name|lower }}
+  name: myokit
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/myokit-${{ version }}.tar.gz
-  sha256: d143121978e9239436bcb7cc1505688fc1e13f01ccc37483d6c35c48138a771e
+  url: https://pypi.org/packages/source/m/myokit/myokit-${{ version }}.tar.gz
+  sha256: 85d08c8108fd9d05093d732c8184569e900a178a721ecc880a190f29e84ded60
 
 build:
   number: 0
@@ -38,7 +37,9 @@ tests:
       imports:
         - myokit
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
@@ -54,6 +55,7 @@ about:
     - myokit/tests/data/formats/cellml/LICENSE
     - myokit/_bin/sundials-win-vs/LICENSE
   homepage: http://myokit.org
+  repository: https://github.com/myokit/myokit
 
 extra:
   recipe-maintainers:
