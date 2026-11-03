@@ -9,6 +9,8 @@ Package license: BSD-3-Clause
 
 Summary: A modeling and simulation tool for cardiac cellular electrophysiology
 
+Development: https://github.com/myokit/myokit
+
 Current build status
 ====================
 
