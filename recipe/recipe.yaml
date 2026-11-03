@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: myokit
-  version: "1.39.2"
+  version: "1.40.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/myokit-${{ version }}.tar.gz
-  sha256: d143121978e9239436bcb7cc1505688fc1e13f01ccc37483d6c35c48138a771e
+  sha256: 85d08c8108fd9d05093d732c8184569e900a178a721ecc880a190f29e84ded60
 
 build:
   number: 0
