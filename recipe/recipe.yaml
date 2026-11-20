@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.40.0"
+  version: "1.41.0"
 
 package:
   name: myokit
@@ -9,12 +9,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/myokit/myokit-${{ version }}.tar.gz
-  sha256: 85d08c8108fd9d05093d732c8184569e900a178a721ecc880a190f29e84ded60
+  sha256: bc67aa5d6a62dc7e37b754c34582a72f4162b8f3a01329dac16615516197312d
 
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
       - myokit = myokit.__main__:main
@@ -22,7 +22,7 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - setuptools
+    - setuptools >=77
     - pip
   run:
     - python >=${{ python_min }}
@@ -30,7 +30,7 @@ requirements:
     - lxml
     - matplotlib-base >=2.2
     - numpy
-    - setuptools
+    - setuptools >=77
 
 tests:
   - python:
@@ -51,9 +51,7 @@ about:
   license: BSD-3-Clause
   license_file:
     - LICENSE.txt
-    - myokit/tests/data/formats/sbml/LICENSE
-    - myokit/tests/data/formats/cellml/LICENSE
-    - myokit/_bin/sundials-win-vs/LICENSE
+    - THIRD-PARTY-NOTICES.txt
   homepage: http://myokit.org
   repository: https://github.com/myokit/myokit
 
