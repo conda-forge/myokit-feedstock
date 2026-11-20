@@ -51,9 +51,7 @@ about:
   license: BSD-3-Clause
   license_file:
     - LICENSE.txt
-    - myokit/tests/data/formats/sbml/LICENSE
-    - myokit/tests/data/formats/cellml/LICENSE
-    - myokit/_bin/sundials-win-vs/LICENSE
+    - THIRD-PARTY-NOTICES.txt
   homepage: http://myokit.org
   repository: https://github.com/myokit/myokit
 
