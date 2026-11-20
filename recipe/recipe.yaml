@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
       - myokit = myokit.__main__:main
@@ -22,7 +22,7 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - setuptools
+    - setuptools >=77
     - pip
   run:
     - python >=${{ python_min }}
@@ -30,7 +30,7 @@ requirements:
     - lxml
     - matplotlib-base >=2.2
     - numpy
-    - setuptools
+    - setuptools >=77
 
 tests:
   - python:
